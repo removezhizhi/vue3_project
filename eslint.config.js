@@ -3,7 +3,6 @@
 import globals from 'globals'
 import pluginJs from '@eslint/js' // JavaScript 规则
 import pluginVue from 'eslint-plugin-vue' // Vue 规则
-console.log(pluginVue)
 import pluginTypeScript from '@typescript-eslint/eslint-plugin' // TypeScript 规则
 
 import parserVue from 'vue-eslint-parser' // Vue 解析器
@@ -93,10 +92,10 @@ export default [
     },
     plugins: { vue: pluginVue, '@typescript-eslint': pluginTypeScript },
     processor: pluginVue.processors['.vue'],
-    // rules: {
-    //   ...pluginVue.configs["vue3-recommended"].rules, // Vue 3 推荐规则
-    //   "vue/no-v-html": "off", // 允许 v-html
-    //   "vue/multi-word-component-names": "off", // 允许单个单词组件名
-    // },
+    rules: {
+      ...pluginVue.configs['vue3-recommended'].rules, // Vue 3 推荐规则
+      'vue/no-v-html': 'off', // 允许 v-html
+      'vue/multi-word-component-names': 'off', // 允许单个单词组件名
+    },
   },
 ]
