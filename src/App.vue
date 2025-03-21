@@ -9,6 +9,7 @@ function get1()=>
 {
   console.log('123');
 }
+let str = 你好;
 </script>
 
 <style scoped>
