@@ -1,0 +1,9 @@
+ublic
+.husky
+.vscode
+.idea
+*.sh
+*.md
+
+src/assets
+stats.html
